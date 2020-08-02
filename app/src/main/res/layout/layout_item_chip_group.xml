@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPlay"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:chipIconEnabled="true"
+            app:chipIcon="@drawable/ic_baseline_play_circle_filled_24"
+            app:chipCornerRadius="16dp"
+            app:chipBackgroundColor="@color/colorAccent"
+            android:text="Play Trailer"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:chipIconEnabled="true"
+            app:chipIcon="@drawable/ic_baseline_star_24"
+            app:chipCornerRadius="16dp"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="@android:color/white"
+            app:chipBackgroundColor="@color/colorPrimary"
+            android:text="Rate Movie"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+    </LinearLayout>
+
