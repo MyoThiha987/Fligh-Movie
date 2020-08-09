@@ -2,7 +2,6 @@ package com.mth.padc_flight_movie.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.mth.padc_flight_movie.data.models.MockMovieListModelImpl
 import com.mth.padc_flight_movie.data.models.MovieListModel
 import com.mth.padc_flight_movie.data.models.MovieListModelImpl
 import com.mth.padc_flight_movie.mvp.presenters.AbstractBasePresenter
@@ -19,7 +18,6 @@ class MovieListPresenterImpl : MovieListPresenter, AbstractBasePresenter<MovieLi
         loadShowcaseMovieFromDatabase(lifecycleOwner)
         loadCastFromApi()
         loadMovieGenresFromApi()
-
     }
 
     override fun onUIReady(lifecycleOwner: LifecycleOwner) {

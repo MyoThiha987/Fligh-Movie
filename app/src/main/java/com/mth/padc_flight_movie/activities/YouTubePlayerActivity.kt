@@ -35,7 +35,6 @@ class YouTubePlayerActivity : AppCompatActivity() ,YouTubePlayerView {
         setUpPresenter()
         setUpYoutubePlayerView()
         mYoutubePlayerPresenter.onUIReady(this,intent.getIntExtra(MOVIE_ID,0))
-
     }
 
     private fun setUpPresenter() {

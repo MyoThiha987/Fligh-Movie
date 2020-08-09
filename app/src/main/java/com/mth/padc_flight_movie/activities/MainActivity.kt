@@ -15,10 +15,11 @@ import com.mth.padc_flight_movie.mvp.presenters.MovieListPresenter
 import com.mth.padc_flight_movie.mvp.presenters.impls.MovieListPresenterImpl
 import com.mth.padc_flight_movie.mvp.views.MovieListView
 import com.mth.padc_flight_movie.root.App
+import com.mth.shared.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_item_movie_geners.*
 
-class MainActivity : AppCompatActivity(), MovieListView {
+class MainActivity : BaseActivity(), MovieListView {
     private lateinit var mMovieListAdapter: MovieListAdapter
     private lateinit var mNowPlayingMovieAdapter: NowPlayingMovieAdapter
     private lateinit var mTopRateMovieAdapter: TopRateMovieAdapter

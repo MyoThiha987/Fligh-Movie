@@ -2,6 +2,27 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'me.moallemi.advanced-build-version'
+
+advancedVersioning {
+    nameOptions {
+        versionMajor 1
+        versionMinor 0
+        versionPatch 1
+    }
+
+    codeOptions {
+        versionCodeType 'AUTO_INCREMENT_ONE_STEP'
+    }
+
+    outputOptions {
+        renameOutput true
+        nameFormat 'PADC_Flight_Movie-v${versionName}'
+    }
+}
+
+def appVersionName = advancedVersioning.versionName
+def appVersionCode = advancedVersioning.versionCode
 
 android {
     compileSdkVersion 30
@@ -11,21 +32,44 @@ android {
         applicationId "com.mth.padc_flight_movie"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode appVersionCode
+        versionName appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //buildConfigField 'String','API_KEY', '\${credentialDP}\"'
+
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        flavorDimensions "appModule"
+        dev {
+            dimension "appModule"
+            applicationIdSuffix = ".dev"
+            manifestPlaceholders = [appName : "@string/app_name_dev"]
+        }
+        prod {
+            dimension "appModule"
+            applicationIdSuffix = ".prod"
+            manifestPlaceholders = [appName : "@string/app_name_prod"]
+        }
+        assemble {
+            dimension "appModule"
+            applicationIdSuffix = ".assenble"
+            manifestPlaceholders = [appName : "@string/app_name_stable"]
         }
     }
 }
 
 dependencies {
+    implementation project(":shared")
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def room_version = "2.2.3"
     def lifecycle_version = "2.2.0"
@@ -52,8 +96,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
 
     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation rootProject.ext.libraries.glide
+    annotationProcessor rootProject.ext.libraries.glideCompiler
     implementation 'com.google.code.gson:gson:2.8.6'
 
     // LiveData
@@ -79,8 +123,8 @@ dependencies {
     implementation "androidx.work:work-runtime:2.4.0"
 
     //Chunk
-    debugCompile 'com.readystatesoftware.chuck:library:1.1.0'
-    releaseCompile 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
 
     //Logging Interceptor
     implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
