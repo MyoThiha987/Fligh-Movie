@@ -1,4 +1,4 @@
-package com.mth.padc_flight_movie.views.viewholders
+package com.mth.shared.activities.views.viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

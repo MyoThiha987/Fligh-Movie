@@ -1,4 +1,4 @@
-package com.mth.shared
+package com.mth.shared.activities.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,13 +1,11 @@
 package com.mth.padc_flight_movie.views.viewholders
 
 import android.view.View
-import com.bumptech.glide.Glide
 import com.mth.padc_flight_movie.delegates.onTapMovieItemDelegate
 import com.mth.padc_flight_movie.data.vos.MovieVO
-import com.mth.padc_flight_movie.utils.BASE_IMAGE_URL
 import com.mth.padc_flight_movie.views.viewpods.TopRateMovieViewPop
+import com.mth.shared.activities.views.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.viewpod_popular_movies.view.imv_cover
-import kotlinx.android.synthetic.main.viewpod_popular_movies.view.tv_movie_name
 import kotlinx.android.synthetic.main.viewpop_top_rated_movies.view.*
 
 class TopRateMovieViewHolder(itemView : View,private val delegate: onTapMovieItemDelegate) : BaseViewHolder<MovieVO>(itemView) {

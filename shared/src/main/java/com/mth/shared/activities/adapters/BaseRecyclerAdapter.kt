@@ -1,7 +1,7 @@
-package com.mth.padc_flight_movie.adapters
+package com.mth.shared.activities.adapters
 
 import androidx.recyclerview.widget.RecyclerView
-import com.mth.padc_flight_movie.views.viewholders.BaseViewHolder
+import com.mth.shared.activities.views.viewholders.BaseViewHolder
 
 abstract class BaseRecyclerAdapter<T: BaseViewHolder<W>,W> : RecyclerView.Adapter<T>() {
     var mData : MutableList<W> = mutableListOf()

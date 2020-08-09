@@ -38,6 +38,7 @@ def credentialData(){
 
 ext{
     credentialDP = credentialDataProperties.getProperty('API_KEY')
+    credentialURL = credentialDataProperties.getProperty('BASE_URL')
 }
 
 apply from : 'libraries.gradle'

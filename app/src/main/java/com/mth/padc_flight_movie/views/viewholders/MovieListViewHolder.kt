@@ -4,6 +4,7 @@ import android.view.View
 import com.mth.padc_flight_movie.delegates.onTapMovieItemDelegate
 import com.mth.padc_flight_movie.data.vos.MovieVO
 import com.mth.padc_flight_movie.views.viewpods.PopularMoveiViewPod
+import com.mth.shared.activities.views.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.viewpod_popular_movies.view.*
 import kotlinx.android.synthetic.main.viewpod_popular_movies.view.imv_cover
 

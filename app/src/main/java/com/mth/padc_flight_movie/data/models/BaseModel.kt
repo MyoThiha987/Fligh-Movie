@@ -35,7 +35,7 @@ abstract class BaseModel {
         val mClient =mOkHttpClient.build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL_FIELD)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(mClient)

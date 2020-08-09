@@ -1,6 +1,5 @@
 package com.mth.padc_flight_movie.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +14,7 @@ import com.mth.padc_flight_movie.mvp.presenters.MovieListPresenter
 import com.mth.padc_flight_movie.mvp.presenters.impls.MovieListPresenterImpl
 import com.mth.padc_flight_movie.mvp.views.MovieListView
 import com.mth.padc_flight_movie.root.App
-import com.mth.shared.BaseActivity
+import com.mth.shared.activities.activities.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_item_movie_geners.*
 

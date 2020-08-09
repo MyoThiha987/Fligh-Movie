@@ -3,6 +3,7 @@ package com.mth.padc_flight_movie.mvp.views
 import com.mth.padc_flight_movie.data.vos.CastCrewVO
 import com.mth.padc_flight_movie.data.vos.GenreVO
 import com.mth.padc_flight_movie.data.vos.MovieVO
+import com.mth.shared.activities.mvp.views.BaseView
 
 interface MovieListView : BaseView{
     fun enableSwipeRefresh()

@@ -9,6 +9,7 @@ import com.mth.padc_flight_movie.delegates.onTapMovieItemDelegate
 import com.mth.padc_flight_movie.delegates.onTapViewPodDelegate
 import com.mth.padc_flight_movie.utils.BASE_IMAGE_URL
 import com.mth.padc_flight_movie.views.viewpods.NowPlayingMovieViewPod
+import com.mth.shared.activities.views.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.viewpod_now_playing_movie.view.*
 
 class NowPlayingMovieViewHolder(itemView : View,private val delegate: onTapViewPodDelegate) : BaseViewHolder<CastCrewVO>(itemView) {
