@@ -71,71 +71,69 @@ android {
 dependencies {
     implementation project(":shared")
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    def room_version = "2.2.3"
-    def lifecycle_version = "2.2.0"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation rootProject.ext.libraries.recyclerview
 
     //Material
-    implementation 'com.google.android.material:material:1.2.0-alpha04'
+    implementation rootProject.ext.libraries.material
 
     // FastList
-    implementation 'bg.devlabs.fastlist:fast-list:1.4'
+    implementation rootProject.ext.libraries.fastlist
 
     // RxKotlin
-    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation rootProject.ext.libraries.rxKotlin
+    implementation rootProject.ext.libraries.rxAndroid
 
     // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation rootProject.ext.libraries.retrofit
+    implementation rootProject.ext.libraries.retrofitAdapter
+    implementation rootProject.ext.libraries.retrofitConverter
 
     // Glide
     implementation rootProject.ext.libraries.glide
     annotationProcessor rootProject.ext.libraries.glideCompiler
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation rootProject.ext.libraries.gson
 
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation rootProject.ext.libraries.livedata
+    implementation rootProject.ext.libraries.viewmodel
 
 
     // lifecycle components
-    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-    kapt "android.arch.lifecycle:compiler:$lifecycle_version"
+    implementation rootProject.ext.libraries.archlifecycleExtension
+    kapt rootProject.ext.libraries.archlifecycleCompiler
 
     // Annotation processor
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    kapt rootProject.ext.libraries.lifecycleCompiler
 
     // Room
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    implementation rootProject.ext.libraries.room
+    kapt rootProject.ext.libraries.roomCompiler
 
     // SwipeRefreshLayout
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation rootProject.ext.libraries.swiperefreshlayout
 
     // Worker
-    implementation "androidx.work:work-runtime:2.4.0"
+    implementation rootProject.ext.libraries.workmanger
 
     //Chunk
-    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
-    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    debugImplementation rootProject.ext.libraries.chunkDebug
+    releaseImplementation rootProject.ext.libraries.chunkRelease
 
     //Logging Interceptor
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    implementation rootProject.ext.libraries.loggingInterceptor
 
     //Slider
-    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+    implementation rootProject.ext.libraries.slider
 
     //date
-    implementation 'com.github.sidhuparas:SimpleDate:2.1.0'
+    implementation rootProject.ext.libraries.simpleDate
 
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation rootProject.ext.libraries.youtubePlayerView
 
 
     //local Unit Test
